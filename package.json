@@ -19,6 +19,7 @@
     "jsdom": "^11.3.0",
     "jsdom-global": "^3.0.2",
     "mocha": "^3.4.2",
+    "mocha-generators": "^2.0.0",
     "nightmare": "^2.10.0"
   }
 }
