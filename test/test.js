@@ -11,11 +11,12 @@ var m = require('mocha-generators').install()
                  p:'#password',pc:"gerard0000",
                  s:'input[type="submit"]',
                  c:'.select-menu.account-switcher span',regexp:/jml674/},
-                 {url: 'https://www.mediapart.fr',gotologin:'li.connexion a',
+              /*{url: 'https://www.mediapart.fr',gotologin:'li.connexion a',
                  u:'#edit-name-page',uc:"jean-michel.lambert7@wanadoo.fr",
                  p:'#edit-pass-page',pc:"gerard",
                  s:'input[name="op"]',
                  c:'.success',regexp:/Vous .tes . pr.sent identifi.-e sur Mediapart./}
+              */
               ];
  tests.forEach((test, index) =>{
     describe('test login '+test.url, function() {
