@@ -38,7 +38,7 @@ jobs:
 
       # run tests!
       - run: 
-          command: yarn test --reporter mocha-junit-reporter  --reporter-options mochaFile=~/junit/test-results.xml
+          command: echo $MOCHA_FILE;yarn test --reporter mocha-junit-reporter  --reporter-options mochaFile=~/junit/test-results.xml
           environment:
             MOCHA_FILE: ~/junit/test-results.xml
           when: always
