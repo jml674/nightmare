@@ -19,7 +19,7 @@ var m = require('mocha-generators').install()
               ];
  tests.forEach((test, index) =>{
     describe('test login '+test.url, function() {
-      this.timeout(25000);
+      this.timeout(50000);
       
       it('should find success login message at the end', async function(){
           var nightmare = Nightmare({
