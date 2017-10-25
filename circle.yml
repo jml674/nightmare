@@ -27,6 +27,9 @@ jobs:
           - v1-dependencies-
 
       - run: yarn install
+      
+      - run: mkdir ~/junit
+
 
       - save_cache:
           paths:
@@ -34,4 +37,12 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn test2
+      - run: 
+          command: mocha test --reporter mocha-junit-reporter
+          environment:
+            MOCHA_FILE: junit/test-results.xml
+          when: always
+      - store_test_results:
+          path: ~/junit
+      - store_artifacts:
+          path: ~/junit          
