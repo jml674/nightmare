@@ -41,7 +41,7 @@ var m = require('mocha-generators').install()
                 return {successString:Collector.collect(test.c)};
             },test)
             .catch(e=>{
-              console.log("ExCEPTION1");
+              console.log("ExCEPTION1",e);
             });
             expect(result.successString).to.match(test.regexp)
             //done();
@@ -49,7 +49,7 @@ var m = require('mocha-generators').install()
             return result;
           }
           catch(e){
-            console.log("ExCEPTION2");
+            console.log("ExCEPTION2",e);
             //done(e);
           }
       })
